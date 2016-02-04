@@ -18,3 +18,5 @@
 
   ![action-shell-script-3.png](images/action-shell-script-3.png)
   ![action-shell-script-4.png](images/action-shell-script-4.png)
+
+ **Using user data in a Shell script potentially not secure!**
