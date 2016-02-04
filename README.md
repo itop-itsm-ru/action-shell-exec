@@ -20,3 +20,7 @@ Can be used in linux.
 
   ![action-shell-script-3.png](images/action-shell-script-3.png)
   ![action-shell-script-4.png](images/action-shell-script-4.png)
+
+### Links
+- [iTop ITSM & CMDB по-русски](http://community.itop-itsm.ru)
+- [Combodo iTop](http://www.combodo.com/itop)
