@@ -6,7 +6,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'action-shell-exec/0.1.0',
+	'action-shell-exec/1.0.0',
 	array(
 		// Identification
 		//

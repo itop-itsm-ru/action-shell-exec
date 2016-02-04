@@ -108,7 +108,11 @@ class ActionShellExec extends Action
         } else {
           $sVarName = $aParam[0];
           $sVarValue = MetaModel::ApplyParams($aParam[0], $aContextArgs);
-          $sVarValue = $sVarValue == $aParam[0] ? '' : $sVarValue;
+          if ($sVarValue == $aParam[0]) {
+            $sVarValue = '';
+            if ($this->IsBeingTested() && !is_null($oLog))
+              $oLog->Set('log', $oLog->Get('log')."There is no value for placeholder: $aParam[0]\n");
+          }
         }
         $sVarName = str_replace('->', '_', $sVarName);
         $sVarName = str_replace('$', '', $sVarName);
