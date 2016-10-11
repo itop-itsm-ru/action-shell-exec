@@ -89,6 +89,9 @@ class ActionShellExec extends Action
     try
     {
       $sScriptPath = $this->Get('script_path');
+      if (!is_executable($sScriptPath)) {
+          throw new Exception('cannot execute script');
+      }
       $sCMD = '';
       $aParams = explode("\n", $this->Get('params'));
       array_walk($aParams, function(&$aParam) {
@@ -122,7 +125,7 @@ class ActionShellExec extends Action
       $sCMD .= ' '.$sScriptPath;
       if ($this->IsBeingTested()) {
         if (!is_null($oLog)) $oLog->Set('log', $oLog->Get('log')."Start executing shell command:\n$sCMD");
-        return "Script will be successfully started.";
+        return "Script will be started.";
       }
       if (!is_null($oLog)) $oLog->Set('log', shell_exec($sCMD));
       return "Script $sScriptPath successfully started.";
