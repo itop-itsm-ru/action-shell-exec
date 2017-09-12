@@ -27,5 +27,3 @@ Dict::Add('RU RU', 'Russian', 'Russian', array(
     'Class:EventNotificationShellExec/Attribute:log' => 'Журнал',
     'Class:EventNotificationShellExec/Attribute:log+' => 'Журнал',
 ));
-
-

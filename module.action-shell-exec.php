@@ -6,7 +6,7 @@
 
 SetupWebPage::AddModule(
 	__FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-	'action-shell-exec/1.0.0',
+	'action-shell-exec/1.0.1',
 	array(
 		// Identification
 		//
@@ -25,7 +25,7 @@ SetupWebPage::AddModule(
 		//
 		'datamodel' => array(
             'model.action-shell-exec.php',
-			'main.action-shell-exec.php',
+//			'main.action-shell-exec.php',
 		),
 		'webservice' => array(
 
@@ -49,6 +49,3 @@ SetupWebPage::AddModule(
 		),
 	)
 );
-
-
-?>
