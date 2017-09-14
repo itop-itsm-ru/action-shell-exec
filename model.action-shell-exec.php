@@ -102,17 +102,12 @@ class ActionShellExec extends Action
                 if (count($aParam) == 2) {
                     $sVarName = $aParam[0];
                     $sVarValue = MetaModel::ApplyParams($aParam[1], $aContextArgs);
-                    if ($sVarValue == $aParam[1]) {
-                        $sVarValue = '';
-                        // Значит ApplyParams не нашел такого плейсхолдера
-                        if ($this->IsBeingTested() && !is_null($oLog))
-                            $oLog->Set('log', $oLog->Get('log')."There is no value for placeholder: $aParam[1]\n");
-                    }
                 } else {
                     $sVarName = $aParam[0];
                     $sVarValue = MetaModel::ApplyParams($aParam[0], $aContextArgs);
                     if ($sVarValue == $aParam[0]) {
                         $sVarValue = '';
+                        // Значит ApplyParams не нашел такого плейсхолдера
                         if ($this->IsBeingTested() && !is_null($oLog))
                             $oLog->Set('log', $oLog->Get('log')."There is no value for placeholder: $aParam[0]\n");
                     }
